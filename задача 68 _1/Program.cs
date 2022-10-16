@@ -2,11 +2,8 @@
 m = 2, n = 3 -> A(m,n) = 9
 m = 3, n = 2 -> A(m,n) = 29*/
 
-
-Console.WriteLine ("Введите число M");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine ("Введите число N");
-int n = Convert.ToInt32(Console.ReadLine());;
+int m = GetNumberFromConsole("Введите число M");
+int n = GetNumberFromConsole("Введите число N");
 Console.WriteLine($"А({m},{n})={AckermanFunction(m,n)}");
 
 
@@ -22,3 +19,9 @@ int AckermanFunction(int m, int n)
     return AckermanFunction(m,n);
 }
 
+
+int GetNumberFromConsole(string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
