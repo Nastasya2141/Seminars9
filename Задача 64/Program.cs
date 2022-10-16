@@ -2,8 +2,7 @@
 N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1" */
 
-Console.WriteLine ("Введите число N");
-int n = Convert.ToInt32(Console.ReadLine());
+int n = GetNumberFromConsole("Введите число N");
 FindNatural(n);
 
 
@@ -17,6 +16,10 @@ void FindNatural(int n)
     }
     FindNatural (n-1);
     
-    
 }
 
+int GetNumberFromConsole(string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
